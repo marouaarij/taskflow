@@ -1,0 +1,14 @@
+<header class="hero">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>Organisez vos tâches simplement.</p>
+  </div>
+
+  <div class="actions">
+    <button class="btn" (click)="rename()">Renommer</button>
+    <button class="btn ghost" (click)="toggleDelete()">
+      {{ canDelete ? 'Désactiver' : 'Activer' }} la suppression
+    </button>
+    <button class="btn danger" [disabled]="!canDelete">Supprimer</button>
+  </div>
+</header>
